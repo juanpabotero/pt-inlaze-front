@@ -1,0 +1,228 @@
+.hero-section {
+  background: url("/assets/Lineas-fondo.png") no-repeat center center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  line-height: 1.1;
+
+  .info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    a {
+      align-items: center;
+      background-color: #add9c4;
+      border-radius: 40px;
+      border: none;
+      box-shadow: -2px 2px 2px #6da2a8;
+      color: #544847;
+      display: flex;
+      font-weight: bold;
+      gap: 20px;
+      padding: 10px 16px;
+      span {
+        background: url("/assets/Vector 1.png") no-repeat center center, #6da1a7;
+        border-radius: 100%;
+        display: inline-block;
+        height: 28px;
+        padding: 4px;
+        width: 28px;
+      }
+    }
+
+    .rating {
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+
+  .image-container {
+    background: url('/assets/Fruta-roja-centro.png') no-repeat left 100%,
+    url('/assets/Palitos-cafe-centro.png') no-repeat right 100%, #add9c4;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  .details {
+    display: grid;
+    gap: 20px;
+    margin-left: 1rem;
+
+    article {
+      align-items: start;
+      display: grid;
+      gap: 1rem;
+      grid-auto-flow: column;
+
+      h3 {
+        margin-bottom: 12px;
+      }
+
+      picture {
+        background-color: #add9c4;
+        border-radius: 100%;
+        display: grid;
+        height: 50px;
+        place-content: center;
+        width: 50px;
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+.popular-drinks,
+.popular-ingredients,
+.latest-drinks,
+.random-ingredients,
+.random-drinks {
+  max-width: 980px;
+  margin: 80px auto 0;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .drinks,
+  .ingredients {
+    background: #4a5751;
+    border-radius: 40px;
+    color: #ffffff;
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px 20px;
+    place-content: center;
+    place-items: center;
+    row-gap: 60px;
+
+    .drink,
+    .ingredient {
+      display: grid;
+      gap: 10px;
+      justify-items: center;
+      text-align: center;
+
+      button {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        color: #a3aaa7;
+        display: flex;
+        gap: 8px;
+
+        img {
+          width: 8px;
+        }
+
+        .plus-figure::before {
+          content: "+";
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+        }
+      }
+      .drink__image,
+      .ingredient__image {
+        border-radius: 100%;
+      }
+    }
+
+    .ingredient {
+      .ingredient__image {
+        padding: 4px 0;
+      }
+    }
+
+    .drink:nth-child(1) .drink__image,
+    .drink:nth-child(4) .drink__image,
+    .drink:nth-child(7) .drink__image {
+      border: 6px solid #dabfd6;
+    }
+    .drink:nth-child(2) .drink__image,
+    .drink:nth-child(5) .drink__image {
+      border: 6px solid #c9daa7;
+    }
+    .drink:nth-child(3) .drink__image,
+    .drink:nth-child(6) .drink__image,
+    .drink:nth-child(8) .drink__image {
+      border: 6px solid #d5b7a4;
+    }
+
+    .ingredient:nth-child(1) .ingredient__image {
+      background-color: #dabfd6;
+    }
+    .ingredient:nth-child(2) .ingredient__image,
+    .ingredient:nth-child(4) .ingredient__image {
+      background-color: #c9daa7;
+    }
+    .ingredient:nth-child(3) .ingredient__image {
+      background-color: #d5b7a4;
+    }
+  }
+
+  .ingredients {
+    background: #544847;
+  }
+}
+
+.bg-yellow-lemon-image,
+.bg-tonic-image,
+.bg-miel-image,
+.bg-fizz-image,
+.bg-fizz-image,
+.bg-gin-image,
+.bg-rum-image,
+.bg-lemon-image,
+.bg-coctel-image {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-yellow-lemon-image {
+  right: 0;
+  top: 100vh;
+}
+.bg-tonic-image {
+  left: 0;
+  top: 170vh;
+}
+.bg-miel-image {
+  right: 0;
+  top: 250vh;
+}
+.bg-fizz-image {
+  right: 0;
+  top: 320vh;
+}
+.bg-gin-image {
+  left: 0;
+  top: 310vh;
+}
+.bg-rum-image {
+  left: 0;
+  top: 400vh;
+}
+.bg-lemon-image {
+  right: 0;
+  top: 520vh;
+}
+.bg-coctel-image {
+  left: 0;
+  top: 640vh;
+}

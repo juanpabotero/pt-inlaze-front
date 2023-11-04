@@ -1,0 +1,25 @@
+<footer>
+  <div class="browse">
+    <p>Browse By Name</p>
+    <ul>
+      <li *ngFor="let letter of letters">
+        <a [routerLink]="['/drinks', 'firstletter', letter]">{{ letter }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="info">
+    <div>
+      <div>
+        <p>© 2023 TheCocktailDB.Proudly</p>
+        <p>built in the UK</p>
+      </div>
+      <ul>
+        <li><a href="#">Missing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Faq</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

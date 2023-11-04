@@ -1,0 +1,13 @@
+<div class="ingridients-container">
+  <h3>Drinks</h3>
+  <div class="ingredients">
+    <a
+      class="ingredient"
+      *ngFor="let drink of drinks"
+      [routerLink]="['/drink', drink.idDrink]"
+    >
+      <img src="{{ drink.strDrinkThumb }}" alt="" />
+      <p>{{ drink.strDrink }}</p>
+    </a>
+  </div>
+</div>

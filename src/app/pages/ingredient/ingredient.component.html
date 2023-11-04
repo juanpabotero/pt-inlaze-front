@@ -1,0 +1,26 @@
+<section class="drink">
+  <div class="drink-info">
+    <h2>{{ ingredient }}</h2>
+    <img
+      src="https://www.thecocktaildb.com/images/ingredients/{{
+        ingredient
+      }}-Medium.png"
+      alt=""
+    />
+  </div>
+
+  <div class="ingridients-container">
+    <h3>Drinks</h3>
+    <div class="ingredients">
+      <a
+        *ngFor="let drink of drinks"
+        [routerLink]="['/drink', drink.idDrink]"
+        class="ingredient"
+      >
+        <img src="{{ drink.strDrinkThumb }}" alt="" />
+        <p>{{ drink.strDrink }}</p>
+      </a>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,53 @@
+footer {
+  margin-top: 40px;
+
+  .browse,
+  .info > div {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .browse {
+    border-top: 4px solid #4a5751;
+    display: grid;
+    font-weight: bold;
+    gap: 10px;
+    padding: 32px 0;
+    place-content: center;
+    text-align: center;
+
+    ul {
+      display: flex;
+      gap: 6px;
+
+      li {
+        list-style: none;
+        &:not(:last-child)::after {
+          content: '/';
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  .info {
+    background: #4a5751;
+    color: #fff;
+
+    & > div {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    ul {
+      display: flex;
+      gap: 16px;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

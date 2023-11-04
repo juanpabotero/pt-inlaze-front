@@ -1,0 +1,166 @@
+<section class="hero-section">
+  <div class="info">
+    <h1>Drink of the moment</h1>
+    <p>
+      Gin, also known as gin, is one of the most popular and appreciated
+      alcoholic beverages worldwide, especially for its versatility in
+      cocktails. Originally from Europe, this spirit has evolved over the
+      centuries and comes in a wide range of styles and flavors.
+    </p>
+    <p class="rating">4.9</p>
+    <a routerLink="/ingredient/Gin">
+      Try now
+      <span></span>
+    </a>
+  </div>
+
+  <picture class="image-container">
+    <img src="/assets/Botella-Gin-centro.png" alt="" />
+  </picture>
+
+  <div class="details">
+    <article>
+      <picture><img src="/assets/water-solid 1.png" alt="" /></picture>
+      <div>
+        <h3>Versatility</h3>
+        <p>
+          The range of flavors in gin is exceptionally wide, thanks to the
+          variety of botanicals that can be used in its production.
+        </p>
+      </div>
+    </article>
+
+    <article>
+      <picture><img src="/assets/cocktail-solid 1.png" alt="" /></picture>
+      <div>
+        <h3>Distiontiv Flavor</h3>
+        <p>
+          Bittersweet and slightly woody flavor is the signature of any gin.
+        </p>
+      </div>
+    </article>
+
+    <article>
+      <picture><img src="/assets/Vector.png" alt="" /></picture>
+      <div>
+        <h3>Purity</h3>
+        <p>
+          This gives it a clean, pure feel, without the caramel or vanilla notes
+          that come from barrel aging.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="popular-drinks">
+  <h2>Popular Drinks</h2>
+  <div class="drinks">
+    <a
+      *ngFor="let drink of initialPopularDrinks"
+      [routerLink]="['/drink', drink.id]"
+      class="drink"
+    >
+      <img class="drink__image" src="/assets/{{ drink.imageName }}" alt="" />
+      <h4>{{ drink.name }}</h4>
+      <button>
+        Add to my list
+        <span class="plus-figure"></span>
+      </button>
+    </a>
+  </div>
+</section>
+
+<section class="popular-ingredients">
+  <h2>Popular Ingredients</h2>
+  <div class="ingredients">
+    <a
+      *ngFor="let ingredient of initialPopularIngredients"
+      [routerLink]="['/ingredient', ingredient.name]"
+      class="ingredient"
+    >
+      <img
+        class="ingredient__image"
+        src="/assets/{{ ingredient.imageName }}"
+        alt=""
+      />
+      <h4>{{ ingredient.name }}</h4>
+      <button>
+        Recipes with {{ ingredient.name }}
+        <img src="/assets/Vector 1.png" alt="" />
+      </button>
+    </a>
+  </div>
+</section>
+
+<section class="latest-drinks">
+  <h2>Latest Drinks</h2>
+  <div class="drinks">
+    <a
+      *ngFor="let drink of initialLatestDrinks"
+      [routerLink]="['/drink', drink.id]"
+      class="drink"
+    >
+      <img class="drink__image" src="/assets/{{ drink.imageName }}" alt="" />
+      <h4>{{ drink.name }}</h4>
+      <button>
+        Add to my list
+        <span class="plus-figure"></span>
+      </button>
+    </a>
+  </div>
+</section>
+
+<section class="random-ingredients">
+  <h2>Random Ingredients</h2>
+  <div class="ingredients">
+    <a
+      *ngFor="let ingredient of initialRandomIngredients"
+      [routerLink]="['/ingredient', ingredient.name]"
+      class="ingredient"
+    >
+      <img
+        class="ingredient__image"
+        src="/assets/{{ ingredient.imageName }}"
+        alt=""
+      />
+      <h4>{{ ingredient.name }}</h4>
+      <button>
+        Recipes with {{ ingredient.name }}
+        <img src="/assets/Vector 1.png" alt="" />
+      </button>
+    </a>
+  </div>
+</section>
+
+<section class="random-drinks">
+  <h2>Random Drinks</h2>
+  <div class="drinks">
+    <a
+      *ngFor="let drink of initialRandomDrinks"
+      [routerLink]="['/drink', drink.id]"
+      class="drink"
+    >
+      <img class="drink__image" src="/assets/{{ drink.imageName }}" alt="" />
+      <h4>{{ drink.name }}</h4>
+      <button>
+        Add to my list
+        <span class="plus-figure"></span>
+      </button>
+    </a>
+  </div>
+</section>
+
+<img
+  class="bg-yellow-lemon-image"
+  src="/assets/Limon-amarillo-fondo.png"
+  alt=""
+/>
+
+<img class="bg-tonic-image" src="/assets/tonic-fondo.png" alt="" />
+<img class="bg-miel-image" src="/assets/miel-fondo.png" alt="" />
+<img class="bg-fizz-image" src="/assets/fizz-fondo.png" alt="" />
+<img class="bg-gin-image" src="/assets/gin-fondo.png" alt="" />
+<img class="bg-rum-image" src="/assets/Rhum-fondo.png" alt="" />
+<img class="bg-lemon-image" src="/assets/Fondo-limon.png" alt="" />
+<img class="bg-coctel-image" src="/assets/Fondo-coctel.png" alt="" />

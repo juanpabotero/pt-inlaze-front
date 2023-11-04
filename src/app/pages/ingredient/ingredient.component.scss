@@ -1,0 +1,97 @@
+.drink {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 40px;
+  margin-bottom: 80px;
+
+  .drink-info {
+    display: grid;
+    gap: 12px;
+    justify-content: center;
+    text-align: center;
+    img {
+      border-radius: 100%;
+      border: 6px solid #add9c4;
+      width: 250px;
+    }
+  }
+}
+
+.ingridients-container {
+  flex: 1;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #add9c4;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 30px;
+
+  .ingredient {
+    display: grid;
+    gap: 4px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    img {
+      border-radius: 100%;
+      padding: 2px;
+      width: 150px;
+    }
+  }
+  .ingredient:nth-child(1) img,
+  .ingredient:nth-child(4) img {
+    background: #dabfd6;
+  }
+  .ingredient:nth-child(2) img,
+  .ingredient:nth-child(5) img {
+    background: #c9daa7;
+  }
+  .ingredient:nth-child(3) img,
+  .ingredient:nth-child(6) img {
+    background: #d5b7a4;
+  }
+}
+
+.next-recipe {
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 80px;
+  button {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    background: url("/assets/Vector 1.png") no-repeat center center, #6da1a7;
+  }
+  button:nth-child(1) {
+    transform: rotate(180deg);
+  }
+}
+
+.instructions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #add9c4;
+  border-radius: 20px;
+  padding: 20px;
+  ol {
+    margin-top: 10px;
+    margin-left: 1rem;
+  }
+  .languages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,37 @@
+.ingridients-container {
+  flex: 1;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #add9c4;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 30px;
+
+  .ingredient {
+    display: grid;
+    gap: 4px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    img {
+      border-radius: 100%;
+      padding: 2px;
+      width: 150px;
+    }
+  }
+  .ingredient:nth-child(1) img,
+  .ingredient:nth-child(4) img {
+    background: #dabfd6;
+  }
+  .ingredient:nth-child(2) img,
+  .ingredient:nth-child(5) img {
+    background: #c9daa7;
+  }
+  .ingredient:nth-child(3) img,
+  .ingredient:nth-child(6) img {
+    background: #d5b7a4;
+  }
+}

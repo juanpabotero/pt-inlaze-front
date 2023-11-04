@@ -1,0 +1,53 @@
+<section class="drink">
+  <div class="drink-info">
+    <h2>{{ cocktail.strDrink }}</h2>
+    <img src="{{ cocktail.strDrinkThumb }}" alt="" />
+  </div>
+
+  <div class="ingridients-container">
+    <h3>Ingredients</h3>
+    <div class="ingredients">
+      <a
+        class="ingredient"
+        *ngFor="let ingredient of ingredients"
+        [routerLink]="['/ingredient', ingredient.name]"
+      >
+        <img
+          src="https://www.thecocktaildb.com/images/ingredients/{{
+            ingredient.name
+          }}-Medium.png"
+          alt=""
+        />
+        <p>{{ ingredient.measure + " " + ingredient.name }}</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="next-recipe">
+  <a
+    routerLink="/drink/{{
+      +cocktail.idDrink <= 11000 ? 11007 : +cocktail.idDrink - 1
+    }}"
+  ></a>
+  <span>Next recipe</span>
+  <a
+    routerLink="/drink/{{
+      +cocktail.idDrink >= 11007 ? 11000 : +cocktail.idDrink + 1
+    }}"
+  ></a>
+</div>
+
+<section class="instructions">
+  <div>
+    <h3>Instructions</h3>
+    <ol>
+      <li *ngFor="let instruction of instructions">{{ instruction }}</li>
+    </ol>
+  </div>
+  <div class="languages">
+    <img src="/assets/USA.png" alt="" />
+    <img src="/assets/belgium.png" alt="" />
+    <img src="/assets/spain.png" alt="" />
+  </div>
+</section>
