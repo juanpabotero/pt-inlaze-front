@@ -42,8 +42,8 @@
   }
 
   .image-container {
-    background: url('/assets/Fruta-roja-centro.png') no-repeat left 100%,
-    url('/assets/Palitos-cafe-centro.png') no-repeat right 100%, #add9c4;
+    background: url("/assets/Fruta-roja-centro.png") no-repeat left 100%,
+      url("/assets/Palitos-cafe-centro.png") no-repeat right 100%, #add9c4;
     border-radius: 100%;
     display: grid;
     place-content: center;
@@ -93,21 +93,48 @@
 
   h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+  }
+
+  .ingredients-title{
+    text-align: right;
   }
 
   .drinks,
   .ingredients {
-    background: #4a5751;
+    // background: #4a5751;
     border-radius: 40px;
     color: #ffffff;
     column-gap: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 60px 20px;
+    padding: 20px 20px 60px;
     place-content: center;
     place-items: center;
     row-gap: 60px;
+    position: relative;
+
+    .bg-form-drinks {
+      clip-path: polygon(0 21%, 100% 0, 100% 100%, 0% 100%);
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #4a5751;
+      border-radius: 30px;
+    }
+    .bg-form-ingredients {
+      clip-path: polygon(0 0, 100% 24%, 100% 100%, 0% 100%);
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #544847;
+      border-radius: 30px;
+    }
 
     .drink,
     .ingredient {
@@ -149,35 +176,31 @@
       }
     }
 
-    .drink:nth-child(1) .drink__image,
-    .drink:nth-child(4) .drink__image,
-    .drink:nth-child(7) .drink__image {
+    .drink:nth-child(2) .drink__image,
+    .drink:nth-child(5) .drink__image,
+    .drink:nth-child(8) .drink__image {
       border: 6px solid #dabfd6;
     }
-    .drink:nth-child(2) .drink__image,
-    .drink:nth-child(5) .drink__image {
+    .drink:nth-child(3) .drink__image,
+    .drink:nth-child(6) .drink__image {
       border: 6px solid #c9daa7;
     }
-    .drink:nth-child(3) .drink__image,
-    .drink:nth-child(6) .drink__image,
-    .drink:nth-child(8) .drink__image {
+    .drink:nth-child(4) .drink__image,
+    .drink:nth-child(7) .drink__image,
+    .drink:nth-child(9) .drink__image {
       border: 6px solid #d5b7a4;
     }
 
-    .ingredient:nth-child(1) .ingredient__image {
+    .ingredient:nth-child(2) .ingredient__image {
       background-color: #dabfd6;
     }
-    .ingredient:nth-child(2) .ingredient__image,
-    .ingredient:nth-child(4) .ingredient__image {
+    .ingredient:nth-child(3) .ingredient__image,
+    .ingredient:nth-child(5) .ingredient__image {
       background-color: #c9daa7;
     }
-    .ingredient:nth-child(3) .ingredient__image {
+    .ingredient:nth-child(4) .ingredient__image {
       background-color: #d5b7a4;
     }
-  }
-
-  .ingredients {
-    background: #544847;
   }
 }
 

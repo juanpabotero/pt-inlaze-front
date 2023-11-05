@@ -56,6 +56,7 @@
 <section class="popular-drinks">
   <h2>Popular Drinks</h2>
   <div class="drinks">
+    <div class="bg-form-drinks"></div>
     <a
       *ngFor="let drink of initialPopularDrinks"
       [routerLink]="['/drink', drink.id]"
@@ -72,8 +73,9 @@
 </section>
 
 <section class="popular-ingredients">
-  <h2>Popular Ingredients</h2>
+  <h2 class="ingredients-title">Popular Ingredients</h2>
   <div class="ingredients">
+    <div class="bg-form-ingredients"></div>
     <a
       *ngFor="let ingredient of initialPopularIngredients"
       [routerLink]="['/ingredient', ingredient.name]"
@@ -96,6 +98,7 @@
 <section class="latest-drinks">
   <h2>Latest Drinks</h2>
   <div class="drinks">
+    <div class="bg-form-drinks"></div>
     <a
       *ngFor="let drink of initialLatestDrinks"
       [routerLink]="['/drink', drink.id]"
@@ -112,8 +115,9 @@
 </section>
 
 <section class="random-ingredients">
-  <h2>Random Ingredients</h2>
+  <h2 class="ingredients-title">Random Ingredients</h2>
   <div class="ingredients">
+    <div class="bg-form-ingredients"></div>
     <a
       *ngFor="let ingredient of initialRandomIngredients"
       [routerLink]="['/ingredient', ingredient.name]"
@@ -136,6 +140,7 @@
 <section class="random-drinks">
   <h2>Random Drinks</h2>
   <div class="drinks">
+    <div class="bg-form-drinks"></div>
     <a
       *ngFor="let drink of initialRandomDrinks"
       [routerLink]="['/drink', drink.id]"
